@@ -2,6 +2,9 @@
 title: Why prerender, not SSR
 date: 2026-05-01
 description: Notes on choosing pure SSG over a server-rendered Angular app.
+tags:
+  - Angular
+  - SSG
 ---
 
 Angular ships SSR and prerendering in the same package — and for a small

@@ -49,3 +49,26 @@ app-root {
 a {
   color: inherit;
 }
+
+.tag-pill {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+a.tag-pill:hover {
+  color: var(--fg);
+  border-color: var(--muted);
+}
+
+.tag-pill-active {
+  color: var(--fg);
+  border-color: var(--fg);
+  background: var(--code-bg);
+}

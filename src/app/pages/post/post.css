@@ -27,9 +27,17 @@
 }
 
 .post-header time {
+  display: block;
   font-family: var(--mono);
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.post-header .post-tags {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .post-body {

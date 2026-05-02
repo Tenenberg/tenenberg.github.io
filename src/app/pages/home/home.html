@@ -5,18 +5,44 @@
   </p>
 </section>
 
+@if (activeTag()) {
+  <p class="tag-filter-banner">
+    Showing posts tagged <strong>{{ activeTagLabel() }}</strong>.
+    <a routerLink="/" class="tag-filter-clear">Show all</a>
+  </p>
+}
+
 <ul class="post-list">
-  @for (post of posts; track post.slug) {
+  @for (post of filteredPosts(); track post.slug) {
     <li class="post-item">
       <time [attr.datetime]="post.date">{{ post.date | date: 'longDate' }}</time>
       <a [routerLink]="['/posts', post.slug]" class="post-title">{{ post.title }}</a>
+      @if (post.tags.length) {
+        <div class="post-tags">
+          @for (t of post.tags; track t.slug) {
+            <a
+              [routerLink]="['/']"
+              [queryParams]="{ tag: t.slug }"
+              class="tag-pill"
+              [class.tag-pill-active]="activeTagNormalized() === t.slug"
+            >
+              {{ t.label }}
+            </a>
+          }
+        </div>
+      }
       @if (post.description) {
         <p class="post-desc">{{ post.description }}</p>
       }
     </li>
   } @empty {
     <li class="post-item-empty">
-      No posts yet. Drop a markdown file in <code>src/content/posts/</code> and rebuild.
+      @if (activeTag()) {
+        No posts with this tag.
+        <a routerLink="/">Clear filter</a>
+      } @else {
+        No posts yet. Drop a markdown file in <code>src/content/posts/</code> and rebuild.
+      }
     </li>
   }
 </ul>

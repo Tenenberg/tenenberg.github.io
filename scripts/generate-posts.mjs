@@ -22,6 +22,33 @@ const files = existsSync(postsDir)
 const toIsoDate = (d) =>
   d instanceof Date ? d.toISOString().slice(0, 10) : String(d);
 
+/**
+ * Optional frontmatter `tags:` as YAML list or comma-separated string.
+ * Each tag keeps its display `label` from the source; `slug` is used in `?tag=` URLs.
+ */
+const parseTags = (raw, filename) => {
+  if (raw == null || raw === '') return [];
+  const parts = Array.isArray(raw)
+    ? raw.map((t) => String(t).trim()).filter(Boolean)
+    : String(raw)
+        .split(',')
+        .map((t) => t.trim())
+        .filter(Boolean);
+  const seen = new Set();
+  const tags = [];
+  for (const t of parts) {
+    const slug = t.toLowerCase().replace(/\s+/g, '-');
+    if (!slug) continue;
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    tags.push({ slug, label: t });
+  }
+  if (parts.length && !tags.length) {
+    throw new Error(`${filename}: 'tags' could not be parsed`);
+  }
+  return tags;
+};
+
 const posts = files.map((filename) => {
   const raw = readFileSync(join(postsDir, filename), 'utf8');
   const { data, content } = matter(raw);
@@ -32,6 +59,7 @@ const posts = files.map((filename) => {
     title: String(data.title),
     date: toIsoDate(data.date),
     description: String(data.description ?? ''),
+    tags: parseTags(data.tags, filename),
     html: marked.parse(content),
   };
 });

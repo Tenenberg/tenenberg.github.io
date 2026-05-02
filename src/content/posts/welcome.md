@@ -2,6 +2,9 @@
 title: Welcome
 date: 2026-05-02
 description: A short intro to this blog and what I plan to write about.
+tags:
+  - meta
+  - intro
 ---
 
 This is the first post on **developer in the AI Era** — a blog about what

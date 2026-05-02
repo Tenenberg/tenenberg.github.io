@@ -4,6 +4,13 @@
       <a routerLink="/" class="back">← all posts</a>
       <h1>{{ p.title }}</h1>
       <time [attr.datetime]="p.date">{{ p.date | date: 'longDate' }}</time>
+      @if (p.tags.length) {
+        <div class="post-tags">
+          @for (t of p.tags; track t.slug) {
+            <a [routerLink]="['/']" [queryParams]="{ tag: t.slug }" class="tag-pill">{{ t.label }}</a>
+          }
+        </div>
+      }
     </header>
 
     <div class="post-body" [innerHTML]="p.html"></div>
