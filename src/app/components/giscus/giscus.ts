@@ -9,12 +9,13 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 
 // ─── giscus configuration ────────────────────────────────────────────────
-// If comments don’t load: enable Discussions + install https://github.com/apps/giscus
-// on tenenberg.github.io, then set CATEGORY_ID (see scripts/fetch-giscus-ids.mjs).
+// Install https://github.com/apps/giscus on this repo (lets visitors post).
+// If CATEGORY_ID is empty: GitHub Actions workflow “Setup giscus” (needs secret
+// REPO_ADMIN_PAT), or enable Discussions in repo Settings → General → Features,
+// then run: node scripts/fetch-giscus-ids.mjs
 const GISCUS_REPO = 'tenenberg/tenenberg.github.io';
 const GISCUS_REPO_ID = 'R_kgDOSSS4pA';
 const GISCUS_CATEGORY = 'General';
-/** Set after Discussions are enabled (run `node scripts/fetch-giscus-ids.mjs`). */
 const GISCUS_CATEGORY_ID = '';
 // ─────────────────────────────────────────────────────────────────────────
 
