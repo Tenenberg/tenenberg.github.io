@@ -9,17 +9,13 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 
 // ─── giscus configuration ────────────────────────────────────────────────
-// Fill REPO_ID and CATEGORY_ID after the GitHub repo exists. Steps:
-//   1. Push the project to https://github.com/tenenberg/tenenberg.github.io
-//   2. Make the repo public.
-//   3. Repo Settings → General → Features → check "Discussions".
-//   4. Install the giscus app: https://github.com/apps/giscus
-//   5. Visit https://giscus.app, fill in the form, and copy the four
-//      data-* values it generates into the constants below.
+// If comments don’t load: enable Discussions + install https://github.com/apps/giscus
+// on tenenberg.github.io, then set CATEGORY_ID (see scripts/fetch-giscus-ids.mjs).
 const GISCUS_REPO = 'tenenberg/tenenberg.github.io';
-const GISCUS_REPO_ID = '';        // e.g. 'R_kgDOXXXXXXX'
+const GISCUS_REPO_ID = 'R_kgDOSSS4pA';
 const GISCUS_CATEGORY = 'General';
-const GISCUS_CATEGORY_ID = '';    // e.g. 'DIC_kwDOXXXXXXX'
+/** Set after Discussions are enabled (run `node scripts/fetch-giscus-ids.mjs`). */
+const GISCUS_CATEGORY_ID = '';
 // ─────────────────────────────────────────────────────────────────────────
 
 @Component({
