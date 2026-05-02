@@ -27,6 +27,11 @@ jobs:
         with:
           token: ${{ secrets.REPO_ADMIN_PAT }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
       - name: Enable GitHub Discussions
         env:
           GH_TOKEN: ${{ secrets.REPO_ADMIN_PAT }}
