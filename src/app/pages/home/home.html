@@ -1,0 +1,22 @@
+<section class="intro">
+  <h1>developer in the AI Era</h1>
+  <p>
+    Notes on the craft of building software when the tools have changed.
+  </p>
+</section>
+
+<ul class="post-list">
+  @for (post of posts; track post.slug) {
+    <li class="post-item">
+      <time [attr.datetime]="post.date">{{ post.date | date: 'longDate' }}</time>
+      <a [routerLink]="['/posts', post.slug]" class="post-title">{{ post.title }}</a>
+      @if (post.description) {
+        <p class="post-desc">{{ post.description }}</p>
+      }
+    </li>
+  } @empty {
+    <li class="post-item-empty">
+      No posts yet. Drop a markdown file in <code>src/content/posts/</code> and rebuild.
+    </li>
+  }
+</ul>

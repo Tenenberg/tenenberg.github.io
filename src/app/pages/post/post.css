@@ -1,0 +1,130 @@
+.post {
+  max-width: 42rem;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header .back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.post-header .back:hover {
+  color: var(--fg);
+}
+
+.post-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.post-header time {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.post-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.post-body :first-child {
+  margin-top: 0;
+}
+
+.post-body h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.post-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+}
+
+.post-body p {
+  margin: 1rem 0;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.post-body li {
+  margin: 0.4rem 0;
+}
+
+.post-body a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.post-body a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.post-body code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.post-body pre {
+  background: var(--code-bg);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 1.25rem 0;
+}
+
+.post-body pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.post-body blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0 2rem;
+}
+
+.comments h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  font-family: var(--mono);
+  color: var(--muted);
+}
+
+.not-found {
+  color: var(--muted);
+}

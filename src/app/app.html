@@ -1,0 +1,14 @@
+<header class="site-header">
+  <a routerLink="/" class="site-title">{{ siteTitle }}</a>
+  <nav class="site-nav">
+    <a routerLink="/">posts</a>
+  </nav>
+</header>
+
+<main class="site-main">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>© {{ year }} · prerendered with Angular · hosted on GitHub Pages</p>
+</footer>

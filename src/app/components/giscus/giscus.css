@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.giscus-placeholder {
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: var(--code-bg);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.giscus-placeholder code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}

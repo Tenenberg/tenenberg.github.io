@@ -1,0 +1,23 @@
+@if (post(); as p) {
+  <article class="post">
+    <header class="post-header">
+      <a routerLink="/" class="back">← all posts</a>
+      <h1>{{ p.title }}</h1>
+      <time [attr.datetime]="p.date">{{ p.date | date: 'longDate' }}</time>
+    </header>
+
+    <div class="post-body" [innerHTML]="p.html"></div>
+
+    <hr class="divider" />
+
+    <section class="comments">
+      <h2>comments</h2>
+      <app-giscus />
+    </section>
+  </article>
+} @else {
+  <p class="not-found">
+    Post not found.
+    <a routerLink="/">Back to home</a>
+  </p>
+}
