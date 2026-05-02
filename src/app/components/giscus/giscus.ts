@@ -16,7 +16,7 @@ import { isPlatformBrowser } from '@angular/common';
 const GISCUS_REPO = 'tenenberg/tenenberg.github.io';
 const GISCUS_REPO_ID = 'R_kgDOSSS4pA';
 const GISCUS_CATEGORY = 'General';
-const GISCUS_CATEGORY_ID = '';
+const GISCUS_CATEGORY_ID = 'DIC_kwDOSSS4pM4C8LdQ';
 // ─────────────────────────────────────────────────────────────────────────
 
 @Component({
