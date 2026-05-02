@@ -2,25 +2,11 @@
   margin-bottom: 3rem;
 }
 
-.intro h1.site-title-line {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
+.intro h1 {
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 0.5rem;
-}
-
-.intro .site-title-logo {
-  flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  display: block;
-}
-
-.intro .site-title-text {
-  line-height: 1.15;
 }
 
 .intro p {
@@ -50,6 +36,20 @@
   font-size: 0.85rem;
   color: var(--muted);
   white-space: nowrap;
+}
+
+.post-title-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.post-preview-logo {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: block;
 }
 
 .post-title {
