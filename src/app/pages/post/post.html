@@ -12,7 +12,9 @@
 
     <section class="comments">
       <h2>comments</h2>
-      <app-giscus />
+      @for (slug of [p.slug]; track slug) {
+        <app-giscus />
+      }
     </section>
   </article>
 } @else {
