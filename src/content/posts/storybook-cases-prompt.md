@@ -1,7 +1,7 @@
 ---
-title: Storybook cases prompt
+title: Automating Storybook with Agents
 date: 2026-05-02
-description: Workflow for branching, agents, and stories per Angular component—with the Storybook mark by the title.
+description: Branch, generate stories per Angular component with focused agent passes, then ship—the same approach works for React.
 tags:
   - Angular
   - React
@@ -9,12 +9,18 @@ tags:
 titleLogo: https://cdn.jsdelivr.net/gh/storybookjs/brand@master/icon/icon-storybook-default.svg
 ---
 
-## Creating cases
+## 1. Branch Out
 
-1. In your **front-end folder**, create a branch named `storybook-YYYY-MM-DD` (use today’s date) so you always know when Storybook was last updated.
+In your front-end folder, create a new branch formatted as `storybook-YYYY-MM-DD` (using today’s date). This guarantees you have a clear timeline of when Storybook was last updated.
 
-2. **For each Angular component**, start an agent in a **new context** and either rewrite existing story files or create them if they are missing. Include **multiple cases per component** (default state, variants, edge cases—whatever the component needs).
+## 2. Generate Contextually
 
-3. When you are finished, **commit and push**.
+Go through your Angular components one by one. For each component, start your AI agent in a new context. Have it create missing story files or rewrite existing ones. Don’t just settle for the basics—instruct the agent to include multiple test cases, including default states, variants, and edge cases.
 
-This pattern works in Angular-first repos; the same idea applies if you also maintain **React** components with Storybook—one focused agent pass per component (or small group) keeps context clean and stories consistent.
+## 3. Commit & Push
+
+Wrap up your generated stories, verify them, and push your branch.
+
+## Why this works
+
+This pattern is highly effective for Angular-first repos, but the exact same logic applies if you’re building in React. By restricting the AI to one focused pass per component (or a small, related group), you keep the agent’s context clean and ensure your stories remain highly consistent.

@@ -2,11 +2,25 @@
   margin-bottom: 3rem;
 }
 
-.intro h1 {
+.intro h1.site-title-line {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 0.5rem;
+}
+
+.intro .site-title-logo {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: block;
+}
+
+.intro .site-title-text {
+  line-height: 1.15;
 }
 
 .intro p {
