@@ -9,5 +9,6 @@ export interface Post {
   readonly date: string;
   readonly description: string;
   readonly tags: readonly PostTag[];
+  readonly titleLogo?: string;
   readonly html: string;
 }

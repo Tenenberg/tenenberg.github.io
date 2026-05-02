@@ -2,7 +2,12 @@
   <article class="post">
     <header class="post-header">
       <a routerLink="/" class="back">← all posts</a>
-      <h1>{{ p.title }}</h1>
+      <h1 class="post-title-line">
+        @if (p.titleLogo) {
+          <img class="post-title-logo" [src]="p.titleLogo" alt="" />
+        }
+        <span class="post-title-text">{{ p.title }}</span>
+      </h1>
       <time [attr.datetime]="p.date">{{ p.date | date: 'longDate' }}</time>
       @if (p.tags.length) {
         <div class="post-tags">
