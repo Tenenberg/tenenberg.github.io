@@ -38,20 +38,6 @@
   white-space: nowrap;
 }
 
-.post-title-block {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-}
-
-.post-preview-logo {
-  flex-shrink: 0;
-  width: 1.75rem;
-  height: 1.75rem;
-  display: block;
-}
-
 .post-title {
   font-size: 1.15rem;
   font-weight: 500;

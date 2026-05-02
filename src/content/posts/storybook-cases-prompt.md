@@ -1,7 +1,7 @@
 ---
-title: Automating Storybook with Agents
+title: Automating Storybook with AI Agents
 date: 2026-05-02
-description: Branch, generate stories per Angular component with focused agent passes, then ship—the same approach works for React.
+description: A step-by-step guide to generating component stories without cluttering your LLM’s context.
 tags:
   - Angular
   - React

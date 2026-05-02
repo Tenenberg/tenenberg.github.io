@@ -16,12 +16,7 @@
   @for (post of filteredPosts(); track post.slug) {
     <li class="post-item">
       <time [attr.datetime]="post.date">{{ post.date | date: 'longDate' }}</time>
-      <div class="post-title-block">
-        @if (post.titleLogo) {
-          <img class="post-preview-logo" [src]="post.titleLogo" alt="" />
-        }
-        <a [routerLink]="['/posts', post.slug]" class="post-title">{{ post.title }}</a>
-      </div>
+      <a [routerLink]="['/posts', post.slug]" class="post-title">{{ post.title }}</a>
       @if (post.tags.length) {
         <div class="post-tags">
           @for (t of post.tags; track t.slug) {
